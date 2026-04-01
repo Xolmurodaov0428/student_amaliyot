@@ -1,0 +1,84 @@
+
+## 📋 **Barcha API Endpointlar:**
+
+### **1. Students API (v1/)**
+- `GET /v1/students` - Barcha talabalar
+- `GET /v1/students/{id}` - Bitta talaba
+- `GET /v1/students/{id}/attendance` - Talabaning davomati
+- `GET /v1/students/{id}/messages` - Talabaga yuborilgan xabarlar
+- `POST /v1/students/{id}/attendance` - Davomat qo'yish
+- `POST /v1/students/{id}/messages` - Xabar yuborish
+- `DELETE /v1/students/{id}/messages/{messageId}` - Xabarni o'chirish
+
+### **2. Organizations API (v1/)**
+- `GET /v1/organizations` - Barcha tashkilotlar
+- `POST /v1/organizations` - Tashkilot yaratish
+- `GET /v1/organizations/{id}` - Bitta tashkilot
+- `PUT /v1/organizations/{id}` - Tashkilotni yangilash
+- `DELETE /v1/organizations/{id}` - Tashkilotni o'chirish
+- `GET /v1/organizations/{id}/students` - Tashkilot talabalari
+
+### **3. Attendance API (v1/)**
+- `GET /v1/attendance` - Barcha davomatlar
+- `POST /v1/attendance` - Davomat qo'shish
+- `GET /v1/attendance/{id}` - Bitta davomat
+- `PUT /v1/attendance/{id}` - Davomatni yangilash
+- `DELETE /v1/attendance/{id}` - Davomatni o'chirish
+- `GET /v1/attendance/statistics` - Davomat statistikasi
+- `GET /v1/attendance/group/{groupId}/today` - Guruhning bugungi davomati
+
+### **4. Faculties API (v1/)**
+- `GET /v1/faculties` - Barcha fakultetlar
+- `POST /v1/faculties` - Fakultet yaratish
+- `GET /v1/faculties/{id}` - Bitta fakultet
+- `PUT /v1/faculties/{id}` - Fakultetni yangilash
+- `DELETE /v1/faculties/{id}` - Fakultetni o'chirish
+- `GET /v1/faculties/{id}/students` - Fakultet talabalari
+- `GET /v1/faculties/{id}/groups` - Fakultet guruhlari
+
+### **5. Tasks API (v1/)**
+- `GET /v1/tasks` - Barcha vazifalar
+- `POST /v1/tasks` - Vazifa yaratish
+- `GET /v1/tasks/{id}` - Bitta vazifa
+- `PUT /v1/tasks/{id}` - Vazifani yangilash
+- `DELETE /v1/tasks/{id}` - Vazifani o'chirish
+- `POST /v1/tasks/{id}/assign` - Vazifani talabalarga biriktirish
+- `GET /v1/tasks/{id}/students` - Vazifa talabalari
+- `GET /v1/tasks/supervisor/{supervisorId}` - Rahbar vazifalari
+
+### **6. Notifications API (v1/)**
+- `GET /v1/notifications` - Barcha bildirishnomalar
+- `POST /v1/notifications` - Bildirishnoma yaratish
+- `GET /v1/notifications/{id}` - Bitta bildirishnoma
+- `PUT /v1/notifications/{id}` - Bildirishnomani yangilash
+- `DELETE /v1/notifications/{id}` - Bildirishnomani o'chirish
+- `POST /v1/notifications/{id}/read` - O'qilgan deb belgilash
+- `POST /v1/notifications/read-all` - Barchasini o'qilgan deb belgilash
+- `GET /v1/notifications/unread-count` - O'qilmaganlar soni
+- `GET /v1/notifications/recent` - So'nggi bildirishnomalar
+- `GET /v1/notifications/user/{userId}` - Foydalanuvchi bildirishnomalari
+
+### **7. Groups API (v1/)**
+- `GET /v1/groups/{groupId}/students` - Guruh talabalari
+- `POST /v1/groups/students` - Bir necha guruh talabalari
+
+### **8. Student Authentication API (student/)**
+- `POST /student/login` - Talaba logini (token kerak emas)
+- `POST /student/logout` - Talaba logouti
+- `GET /student/profile` - Talaba profili
+
+### **9. Student Portal API (student/portal/)**
+- `GET /student/portal/profile` - Portal profili
+- `PUT /student/portal/profile` - Profilni yangilash
+- `GET /student/portal/attendance` - Davomat tarixi
+- `GET /student/portal/attendance/stats` - Davomat statistikasi
+- `GET /student/portal/attendance/today` - Bugungi davomat
+- `GET /student/portal/organization` - Tashkilot ma'lumotlari
+- `PUT /student/portal/organization` - Tashkilot ma'lumotlarini yangilash
+- `GET /student/portal/group` - Guruh ma'lumotlari
+
+## 🔐 **Authentication:**
+- **Admin API**: `Authorization: Bearer API_TOKEN`
+- **Student API**: `Authorization: Bearer STUDENT_TOKEN`
+
+To'liq dokumentatsiya [API_COMPLETE_DOCUMENTATION.md](cci:7://file:///c:/xampp/htdocs/yangi_loyiha/API_COMPLETE_DOCUMENTATION.md:0:0-0:0) faylida bor.
